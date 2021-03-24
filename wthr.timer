@@ -1,0 +1,10 @@
+[Unit]
+Description=Schedule wthr script to run hourly
+
+[Timer]
+onCalender=hourly
+
+Persistent=true
+
+[Install]
+WantedBy=timers.target
