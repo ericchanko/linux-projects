@@ -19,7 +19,15 @@ To change frequency of getting weather updates, change the following in <b>wthr.
   <li>onClaender=frequency </li>
 </ul>
 reload the system using: <br>
-sudo systemctl daemon-reload
+sudo systemctl daemon-reload <br>
+
+start the service using: <br>
+sudo systemctl start wthr.service <br>
+
+enable the service (to persist after shutdown) using: <br>
+sudo systemctl enable wthr.service <br>
+
+
 
 Now in your working directory, you will get an update contained in weather.txt depending on the frequency you designated in wthr.timer.
 To force a weather updated, type <b>./wthr</b> in your working directory
