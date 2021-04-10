@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for FILE in *;
+        do
+                if [[ $FILE = *" "* ]]; then
+                        NEWNAME=$(sed "s/ /-/g" <<< $FILE)
+                        mv "$FILE" $NEWNAME
+                fi
+done
