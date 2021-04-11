@@ -1,0 +1,21 @@
+#!/bin/bash
+
+LOGS='/home/vagrant/.config/backup-logs'
+DATE=$(date +"%d_%m_%y_%M")
+USAGE='USAGE: backup source dest'
+
+# check if file backup-logs exist
+if [ ! -f $LOGS ]; then
+        touch $LOGS
+fi
+
+# Check if correct arguments passed
+if [ -z $1 ] || [ -z $2 ]; then
+        echo $USAGE
+        exit 1
+fi
+echo adding directory $1 to $2
+
+# rsync and add stuff to file
+rsync -r $1 $2 --delete
+echo -e "File $1 backed up on $DATE to machine and destination $2\n" >> $LOGS
