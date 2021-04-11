@@ -17,5 +17,5 @@ fi
 echo adding directory $1 to $2
 
 # rsync and add stuff to file
-rsync -r $1 $2 --delete
+rsync -a $1 $2 --delete
 echo -e "File $1 backed up on $DATE to machine and destination $2\n" >> $LOGS
