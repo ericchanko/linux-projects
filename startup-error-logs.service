@@ -1,0 +1,11 @@
+[Unit]
+Description=Startup error logs service for ACIT2420 final
+
+[Service]
+Type=simple
+ExecStart=/home/vagrant/final/backup-logs
+WorkingDirectory=/home/vagrant/final
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
