@@ -9,7 +9,7 @@ fi
 
 # Gotta do stuff now
 NEWFOLD='backups-'$(date +"%d_%m")
-
+function newfold() {
 # check if directory doesnt exist
 if [ ! -d "~/.config/backup-logs"$NEWFOLD ]; then
         echo "MAKING FOLDER"
@@ -19,7 +19,10 @@ else
         echo "Directory already exists, cannot backup for the day"
         exit 1
 fi
+}
 
+#run function
+newfold
 # move files in directory ~/.config/logs/ to directory now
 mv -v ~/.config/logs/* $NEWFOLD
 
