@@ -1,9 +1,8 @@
 #!/bin/bash
 
+# variables
 DATE=$(date +"%d-%m-%H-%M")
 FILE='warning-'$DATE'.log'
-
-# Check if log file exists
 COMMAND='sudo journalctl -p "warning".."emerg"'
 
 # Check if theres any logs
