@@ -1,3 +1,18 @@
+This collection of linux programs is my exploration of linux programs such as journalctl, systemd, ssh, and general bash programing. 
+
+
+As follows, the backup script uses the rsync utility that can be used to backup data to a remote server through ssh. This script features:
+- linked deletetion (i.e. backuped files on destination are deleted if they are deleted from source directory)
+- writes all file changes to a backup log
+- backup log keeps a record of
+    a. date backup was made
+    b. name of file that was backed up
+    c. remote server ip the backup was made on
+    
+
+
+
+
 Getting started: <br>
 Type the following commands in your terminal. <br>
 In  any directory, do:<br>
